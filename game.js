@@ -20,8 +20,10 @@ var map_name;
 var map_index = 0;
 
 var map_order = [
+  "map_02",
+  "map_01",
   "map_00",
-  "map_00"
+  "map_03"
 ]
 
 var tile_data = [
@@ -90,6 +92,46 @@ var tile_data = [
     name: "Trimmed Hedge",
     description: "An even more well-kept hedge. Give it another wack."
   },
+  {
+    type: "ground",
+    name: "Sand",
+    description: "Dry, arid sand. Can be walked on."
+  },
+  {
+    type: "sand_dune",
+    name: "Sand Dune",
+    description: "A large pile of sand. Can be blown away by choosing Interact with Wind equipped."
+  },
+  {
+    type: "ground",
+    name: "Concrete",
+    description: "An unyielding concrete floor. Can be walked on."
+  },
+  {
+    type: "ladder",
+    name: "Ladder (up)",
+    description: "A ladder which is too high to reach. Can be pulled down with a lance."
+  },
+  {
+    type: "ground",
+    name: "Ladder (down)",
+    description: "An ladder which has been pulled down. Now you can reach it."
+  },
+  {
+    type: "capture_target",
+    name: "Throne",
+    description: "The leader's throne. To capture, select Interact."
+  },
+  {
+    type: "cobweb",
+    name: "Cobweb",
+    description: "A cobweb thicker than me when making this game. Can be cut by choosing Interact with a sword equipped."
+  },
+  {
+    type: "electric_door",
+    name: "Electric Door",
+    description: "A door which can be powered by electricity. Can be opened by choosing Interact with Thunder equipped."
+  },
 ]
 
 var weapon_damage = {
@@ -99,8 +141,6 @@ var weapon_damage = {
   "steel_sword": 9,
   "steel_lance": 8,
   "steel_axe": 10,
-  "iron_bow": 5,
-  "steel_bow": 9,
   "fire": 8,
   "thunder": 7,
   "wind": 6
@@ -139,9 +179,11 @@ var inventory = [
     id: "hp_potion",
   },
   {
-    id: "steel_axe",
+    id: "hp_potion",
   },
-
+  {
+    id: "hp_potion",
+  },
 ]
 
 var shop_items = [
@@ -160,7 +202,7 @@ var equipped = 0;
 
 var player_level = 1;
 var player_xp = 0;
-var player_cash = 500;
+var player_cash = 300;
 
 function calc_player_damage(victim) {
 
@@ -201,6 +243,13 @@ function load_map(name) {
   map_name = map;
   map = maps[name];
 
+  camera_x = -64;
+  if (name == "map_02") {
+    camera_y = 768;
+  } else {
+    camera_y = -64;
+  }
+
   entities = [];
 
   for (var i = 0; i < map.layers[1].objects.length; i++) {
@@ -210,8 +259,8 @@ function load_map(name) {
         type: "player",
         x: object.x / 16,
         y: object.y / 16,
-        hp: 30 + player_level - 1,
-        max_hp: 30 + player_level - 1,
+        hp: 30 + (player_level - 1) * 2,
+        max_hp: 30 + (player_level - 1) * 2,
         tile: 128,
       });
       use_inventory_item(equipped); // Set tile.
@@ -221,6 +270,7 @@ function load_map(name) {
         x: object.x / 16,
         y: object.y / 16,
       };
+      var death_knight = false;
       for (var j = 0; j < object.properties.length; j++) {
         var property = object.properties[j];
         if (property.name == "hp") {
@@ -265,7 +315,13 @@ function load_map(name) {
           enemy.res_thunder = property.value;
         } else if (property.name == "res_wind") {
           enemy.res_wind = property.value;
+        } else if (property.name == "death_knight" && property.value == true) {
+          death_knight = true;
         }
+      }
+      if (death_knight) {
+        enemy.tile = 160;
+        enemy.death_knight = true;
       }
       entities.push(enemy);
     }
@@ -343,6 +399,18 @@ function interact_with(x, y) {
   var index = y * width + x;
 
   switch (data[index]) {
+    case 20:
+      if (inventory[equipped].id == "iron_sword" || inventory[equipped].id == "steel_sword") {
+        data[index] = 16;
+        return true;
+      }
+      break;
+    case 17:
+      if (inventory[equipped].id == "iron_lance" || inventory[equipped].id == "steel_lance") {
+        data[index] = 18;
+        return true;
+      }
+      break;
     case 8:
       if (inventory[equipped].id == "iron_axe" || inventory[equipped].id == "steel_axe") {
         data[index] = 2;
@@ -355,7 +423,20 @@ function interact_with(x, y) {
         return true;
       }
       break;
+    case 21:
+      if (inventory[equipped].id == "thunder") {
+        data[index] = 16;
+        return true;
+      }
+      break;
+    case 15:
+      if (inventory[equipped].id == "wind") {
+        data[index] = 14;
+        return true;
+      }
+      break;
     case 9:
+    case 19:
       game_state = "victory";
       return true;
       break;
@@ -583,7 +664,7 @@ function is_movable_to(origin_x, origin_y, max, x, y) {
 
   var clear_check = true;
   for (var i = 0; i < entities.length; i++) {
-    if (entities[i].x == x && entities[i].y == y && !(x == origin_x && y == origin_y)) {
+    if (entities[i].type != "null" && entities[i].x == x && entities[i].y == y && !(x == origin_x && y == origin_y)) {
       clear_check = false;
     }
   }
@@ -620,6 +701,10 @@ function draw_ui() {
       if (Math.floor(mouse_tile_coords.x) == entity.x && Math.floor(mouse_tile_coords.y) == entity.y && entity.type != "null") {
         name_text = entity_data[entity.type].name;
         desc_text = entity_data[entity.type].description;
+        if (entity.death_knight) {
+          name_text = "Death Knight";
+          desc_text = "The reason why All Of Your Friends Are Dead. It's time to avenge them."
+        }
         if (entity.type == "player") {
           desc_text += " (HP: " + entity.hp + "/" + entity.max_hp + ", Level: " + player_level + ", XP: " + player_xp + "/100, Cash: " + player_cash + "G)";
         }
@@ -737,7 +822,8 @@ canvas.addEventListener("mousedown", e => {
   }
 
   if (game_state == "title_screen") {
-    load_map("map_00");
+    map_index = 0;
+    load_map(map_order[map_index]);
     game_state = "player_turn_anim";
   } else if (game_state == "game_over") {
     load_map(map_order[map_index]);
@@ -813,6 +899,22 @@ function draw(timestamp) {
       ctx.textAlign = "center";
       ctx.fillStyle = "#FFFFFF";
       ctx.fillText("Click to Begin", window.innerWidth / 2, window.innerHeight / 2 + 48);
+      ctx.textAlign = "left";
+
+      break;
+
+    case "final_victory":
+
+      ctx.font = "96px sans";
+      ctx.textAlign = "center";
+      ctx.fillStyle = "#FFFFFF";
+      ctx.fillText("You Win!", window.innerWidth / 2, window.innerHeight / 2 - 48);
+      ctx.textAlign = "left";
+
+      ctx.font = "48px sans";
+      ctx.textAlign = "center";
+      ctx.fillStyle = "#FFFFFF";
+      ctx.fillText("Thanks for Playing!", window.innerWidth / 2, window.innerHeight / 2 + 48);
       ctx.textAlign = "left";
 
       break;
@@ -1074,13 +1176,19 @@ function draw(timestamp) {
           }
         }
 
-        enemy_move_target_x = move_to_x;
-        enemy_move_target_y = move_to_y;
+        if (move_to_distance >= 100) {
+          enemy_turn_moving++;
+        } else {
 
-        enemy_move_origin_x = entities[enemy_turn_moving].x;
-        enemy_move_origin_y = entities[enemy_turn_moving].y;
+          enemy_move_target_x = move_to_x;
+          enemy_move_target_y = move_to_y;
+  
+          enemy_move_origin_x = entities[enemy_turn_moving].x;
+          enemy_move_origin_y = entities[enemy_turn_moving].y;
+  
+          game_state = "enemy_move";
 
-        game_state = "enemy_move";
+        }
 
       }
 
@@ -1157,13 +1265,17 @@ function draw(timestamp) {
             var level_diff = entities[battle_with].level - player_level
             if (level_diff < 0) { level_diff = 0; }
             player_xp += 20 + (level_diff * 10);
-            player_cash += 50 + (level_diff * 20);
+            player_cash += 60 + (level_diff * 25);
             while (player_xp >= 100) {
               player_xp -= 100;
               player_level++;
               var player = get_player();
-              player.hp++;
-              player.max_hp++;
+              player.hp += 2;
+              player.max_hp += 2;
+            }
+
+            if (entities[battle_with].death_knight == true) {
+              game_state = "final_victory";
             }
 
           }

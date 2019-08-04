@@ -2,9 +2,9 @@
  "infinite":false,
  "layers":[
         {
-         "data":[4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 12, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 12, 5, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 5, 4, 2, 2, 2, 2, 2, 8, 8, 8, 2, 2, 12, 5, 2, 2, 8, 8, 8, 2, 2, 2, 2, 2, 5, 4, 2, 2, 2, 2, 2, 8, 2, 2, 2, 5, 12, 5, 5, 2, 2, 2, 8, 2, 2, 2, 2, 2, 5, 4, 12, 12, 2, 12, 12, 8, 2, 2, 5, 5, 4, 4, 5, 5, 2, 2, 8, 2, 2, 2, 2, 2, 5, 4, 2, 2, 2, 12, 2, 2, 2, 5, 5, 4, 6, 6, 4, 5, 5, 2, 12, 2, 2, 2, 12, 12, 12, 4, 5, 5, 5, 12, 5, 5, 5, 5, 4, 6, 6, 6, 6, 4, 5, 5, 12, 5, 5, 5, 12, 5, 5, 9, 5, 5, 5, 12, 5, 5, 5, 5, 4, 6, 6, 6, 6, 4, 5, 5, 12, 5, 5, 5, 12, 5, 5, 9, 2, 2, 2, 12, 2, 2, 2, 5, 5, 4, 6, 6, 4, 5, 5, 2, 12, 2, 2, 2, 12, 2, 5, 4, 12, 12, 12, 12, 12, 8, 2, 2, 5, 5, 4, 4, 5, 5, 2, 2, 8, 2, 2, 2, 12, 2, 5, 4, 2, 2, 2, 2, 2, 8, 2, 2, 2, 5, 5, 5, 5, 2, 2, 2, 8, 2, 2, 2, 2, 2, 5, 4, 2, 2, 2, 2, 2, 8, 8, 8, 2, 2, 5, 5, 2, 2, 8, 8, 8, 2, 2, 2, 2, 2, 5, 4, 2, 2, 2, 2, 2, 2, 12, 2, 2, 2, 5, 5, 2, 2, 2, 12, 2, 2, 2, 2, 2, 2, 5, 4, 5, 5, 5, 5, 5, 5, 12, 5, 5, 5, 5, 5, 5, 5, 5, 12, 5, 5, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
+         "data":[4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 16, 16, 16, 16, 16, 16, 20, 16, 20, 16, 20, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 4, 4, 16, 16, 16, 16, 16, 16, 16, 20, 16, 20, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 4, 4, 16, 16, 16, 16, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 16, 16, 16, 16, 16, 16, 16, 16, 4, 4, 16, 16, 16, 16, 4, 16, 16, 16, 16, 16, 16, 16, 16, 4, 16, 16, 16, 16, 16, 16, 16, 16, 4, 4, 4, 4, 20, 4, 4, 16, 16, 16, 16, 16, 16, 16, 16, 4, 4, 4, 4, 4, 20, 20, 4, 4, 4, 16, 16, 16, 16, 16, 16, 16, 16, 4, 4, 4, 4, 16, 16, 16, 16, 16, 4, 16, 16, 16, 16, 16, 4, 16, 16, 16, 16, 16, 16, 16, 4, 4, 4, 4, 4, 4, 16, 16, 4, 16, 16, 16, 16, 16, 16, 16, 4, 16, 16, 16, 16, 16, 16, 16, 4, 4, 4, 4, 4, 4, 16, 16, 4, 16, 16, 16, 16, 16, 16, 16, 4, 16, 16, 16, 16, 16, 16, 16, 16, 4, 4, 4, 4, 16, 16, 16, 16, 16, 4, 16, 16, 16, 16, 16, 4, 4, 4, 4, 21, 4, 4, 16, 16, 16, 16, 16, 16, 16, 16, 4, 4, 4, 4, 4, 21, 21, 4, 4, 4, 4, 16, 16, 16, 16, 4, 16, 16, 16, 16, 16, 16, 16, 16, 4, 16, 16, 16, 16, 16, 16, 16, 16, 4, 4, 16, 16, 16, 16, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 16, 16, 16, 16, 16, 16, 16, 16, 4, 4, 16, 16, 16, 16, 16, 16, 16, 21, 16, 16, 21, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 4, 4, 16, 16, 16, 16, 16, 16, 16, 21, 16, 16, 21, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
          "height":16,
-         "id":2,
+         "id":1,
          "name":"Tile Layer 1",
          "opacity":1,
          "type":"tilelayer",
@@ -15,39 +15,39 @@
         }, 
         {
          "draworder":"topdown",
-         "id":4,
+         "id":2,
          "name":"Object Layer 1",
          "objects":[
                 {
                  "height":16,
-                 "id":4,
+                 "id":1,
                  "name":"player",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":16,
                  "x":0,
-                 "y":128
+                 "y":112
                 }, 
                 {
                  "height":16,
-                 "id":5,
+                 "id":3,
                  "name":"enemy",
                  "properties":[
                         {
                          "name":"hp",
                          "type":"int",
-                         "value":18
+                         "value":24
                         }, 
                         {
                          "name":"level",
                          "type":"int",
-                         "value":5
+                         "value":9
                         }, 
                         {
                          "name":"res_axe",
                          "type":"int",
-                         "value":0
+                         "value":3
                         }, 
                         {
                          "name":"res_fire",
@@ -57,69 +57,69 @@
                         {
                          "name":"res_lance",
                          "type":"int",
-                         "value":-2
+                         "value":3
                         }, 
                         {
                          "name":"res_sword",
                          "type":"int",
-                         "value":2
+                         "value":-4
                         }, 
                         {
                          "name":"res_thunder",
                          "type":"int",
-                         "value":-2
+                         "value":4
                         }, 
                         {
                          "name":"res_wind",
                          "type":"int",
-                         "value":2
+                         "value":3
                         }, 
                         {
                          "name":"weapon",
                          "type":"string",
-                         "value":"iron_axe"
+                         "value":"thunder"
                         }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":16,
                  "x":32,
-                 "y":48
+                 "y":208
                 }, 
                 {
                  "height":16,
-                 "id":7,
+                 "id":4,
                  "name":"enemy",
                  "properties":[
                         {
                          "name":"hp",
                          "type":"int",
-                         "value":20
+                         "value":22
                         }, 
                         {
                          "name":"level",
                          "type":"int",
-                         "value":6
+                         "value":8
                         }, 
                         {
                          "name":"res_axe",
                          "type":"int",
-                         "value":-2
+                         "value":3
                         }, 
                         {
                          "name":"res_fire",
                          "type":"int",
-                         "value":1
+                         "value":-3
                         }, 
                         {
                          "name":"res_lance",
                          "type":"int",
-                         "value":0
+                         "value":3
                         }, 
                         {
                          "name":"res_sword",
                          "type":"int",
-                         "value":1
+                         "value":3
                         }, 
                         {
                          "name":"res_thunder",
@@ -129,23 +129,23 @@
                         {
                          "name":"res_wind",
                          "type":"int",
-                         "value":4
+                         "value":-3
                         }, 
                         {
                          "name":"weapon",
                          "type":"string",
-                         "value":"steel_lance"
+                         "value":"steel_sword"
                         }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":112,
-                 "y":96
+                 "x":208,
+                 "y":176
                 }, 
                 {
                  "height":16,
-                 "id":8,
+                 "id":5,
                  "name":"enemy",
                  "properties":[
                         {
@@ -156,49 +156,225 @@
                         {
                          "name":"level",
                          "type":"int",
-                         "value":10
+                         "value":11
                         }, 
                         {
                          "name":"res_axe",
                          "type":"int",
-                         "value":1
+                         "value":5
                         }, 
                         {
                          "name":"res_fire",
                          "type":"int",
-                         "value":2
+                         "value":5
                         }, 
                         {
                          "name":"res_lance",
                          "type":"int",
-                         "value":2
+                         "value":5
                         }, 
                         {
                          "name":"res_sword",
                          "type":"int",
-                         "value":3
+                         "value":6
                         }, 
                         {
                          "name":"res_thunder",
                          "type":"int",
-                         "value":-5
+                         "value":-6
                         }, 
                         {
                          "name":"res_wind",
                          "type":"int",
-                         "value":6
+                         "value":5
                         }, 
                         {
                          "name":"weapon",
                          "type":"string",
-                         "value":"steel_axe"
+                         "value":"steel_sword"
                         }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":0,
-                 "y":176
+                 "x":352,
+                 "y":16
+                }, 
+                {
+                 "height":16,
+                 "id":6,
+                 "name":"enemy",
+                 "properties":[
+                        {
+                         "name":"hp",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"level",
+                         "type":"int",
+                         "value":11
+                        }, 
+                        {
+                         "name":"res_axe",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"res_fire",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"res_lance",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"res_sword",
+                         "type":"int",
+                         "value":-7
+                        }, 
+                        {
+                         "name":"res_thunder",
+                         "type":"int",
+                         "value":6
+                        }, 
+                        {
+                         "name":"res_wind",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"weapon",
+                         "type":"string",
+                         "value":"thunder"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":352,
+                 "y":224
+                }, 
+                {
+                 "height":16,
+                 "id":7,
+                 "name":"enemy",
+                 "properties":[
+                        {
+                         "name":"death_knight",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"hp",
+                         "type":"int",
+                         "value":35
+                        }, 
+                        {
+                         "name":"level",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"res_axe",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"res_fire",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"res_lance",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"res_sword",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"res_thunder",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"res_wind",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"weapon",
+                         "type":"string",
+                         "value":"steel_sword"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":352,
+                 "y":128
+                }, 
+                {
+                 "height":16,
+                 "id":8,
+                 "name":"enemy",
+                 "properties":[
+                        {
+                         "name":"hp",
+                         "type":"int",
+                         "value":24
+                        }, 
+                        {
+                         "name":"level",
+                         "type":"int",
+                         "value":9
+                        }, 
+                        {
+                         "name":"res_axe",
+                         "type":"int",
+                         "value":3
+                        }, 
+                        {
+                         "name":"res_fire",
+                         "type":"int",
+                         "value":3
+                        }, 
+                        {
+                         "name":"res_lance",
+                         "type":"int",
+                         "value":3
+                        }, 
+                        {
+                         "name":"res_sword",
+                         "type":"int",
+                         "value":4
+                        }, 
+                        {
+                         "name":"res_thunder",
+                         "type":"int",
+                         "value":-4
+                        }, 
+                        {
+                         "name":"res_wind",
+                         "type":"int",
+                         "value":3
+                        }, 
+                        {
+                         "name":"weapon",
+                         "type":"string",
+                         "value":"steel_sword"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":32,
+                 "y":32
                 }, 
                 {
                  "height":16,
@@ -208,89 +384,32 @@
                         {
                          "name":"hp",
                          "type":"int",
-                         "value":18
+                         "value":22
                         }, 
                         {
                          "name":"level",
                          "type":"int",
-                         "value":5
+                         "value":8
                         }, 
                         {
                          "name":"res_axe",
-                         "type":"int",
-                         "value":0
-                        }, 
-                        {
-                         "name":"res_fire",
                          "type":"int",
                          "value":3
                         }, 
                         {
-                         "name":"res_lance",
-                         "type":"int",
-                         "value":-2
-                        }, 
-                        {
-                         "name":"res_sword",
-                         "type":"int",
-                         "value":2
-                        }, 
-                        {
-                         "name":"res_thunder",
-                         "type":"int",
-                         "value":-2
-                        }, 
-                        {
-                         "name":"res_wind",
-                         "type":"int",
-                         "value":2
-                        }, 
-                        {
-                         "name":"weapon",
-                         "type":"string",
-                         "value":"iron_axe"
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":176,
-                 "y":192
-                }, 
-                {
-                 "height":16,
-                 "id":10,
-                 "name":"enemy",
-                 "properties":[
-                        {
-                         "name":"hp",
-                         "type":"int",
-                         "value":20
-                        }, 
-                        {
-                         "name":"level",
-                         "type":"int",
-                         "value":6
-                        }, 
-                        {
-                         "name":"res_axe",
-                         "type":"int",
-                         "value":-2
-                        }, 
-                        {
                          "name":"res_fire",
                          "type":"int",
-                         "value":1
+                         "value":-3
                         }, 
                         {
                          "name":"res_lance",
                          "type":"int",
-                         "value":0
+                         "value":3
                         }, 
                         {
                          "name":"res_sword",
                          "type":"int",
-                         "value":1
+                         "value":3
                         }, 
                         {
                          "name":"res_thunder",
@@ -300,133 +419,19 @@
                         {
                          "name":"res_wind",
                          "type":"int",
-                         "value":4
+                         "value":-3
                         }, 
                         {
                          "name":"weapon",
                          "type":"string",
-                         "value":"steel_lance"
+                         "value":"steel_sword"
                         }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":240,
-                 "y":32
-                }, 
-                {
-                 "height":16,
-                 "id":11,
-                 "name":"enemy",
-                 "properties":[
-                        {
-                         "name":"hp",
-                         "type":"int",
-                         "value":18
-                        }, 
-                        {
-                         "name":"level",
-                         "type":"int",
-                         "value":5
-                        }, 
-                        {
-                         "name":"res_axe",
-                         "type":"int",
-                         "value":0
-                        }, 
-                        {
-                         "name":"res_fire",
-                         "type":"int",
-                         "value":3
-                        }, 
-                        {
-                         "name":"res_lance",
-                         "type":"int",
-                         "value":-2
-                        }, 
-                        {
-                         "name":"res_sword",
-                         "type":"int",
-                         "value":2
-                        }, 
-                        {
-                         "name":"res_thunder",
-                         "type":"int",
-                         "value":-2
-                        }, 
-                        {
-                         "name":"res_wind",
-                         "type":"int",
-                         "value":2
-                        }, 
-                        {
-                         "name":"weapon",
-                         "type":"string",
-                         "value":"iron_axe"
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":288,
-                 "y":160
-                }, 
-                {
-                 "height":16,
-                 "id":12,
-                 "name":"enemy",
-                 "properties":[
-                        {
-                         "name":"hp",
-                         "type":"int",
-                         "value":18
-                        }, 
-                        {
-                         "name":"level",
-                         "type":"int",
-                         "value":5
-                        }, 
-                        {
-                         "name":"res_axe",
-                         "type":"int",
-                         "value":0
-                        }, 
-                        {
-                         "name":"res_fire",
-                         "type":"int",
-                         "value":3
-                        }, 
-                        {
-                         "name":"res_lance",
-                         "type":"int",
-                         "value":-2
-                        }, 
-                        {
-                         "name":"res_sword",
-                         "type":"int",
-                         "value":2
-                        }, 
-                        {
-                         "name":"res_thunder",
-                         "type":"int",
-                         "value":-2
-                        }, 
-                        {
-                         "name":"res_wind",
-                         "type":"int",
-                         "value":2
-                        }, 
-                        {
-                         "name":"weapon",
-                         "type":"string",
-                         "value":"iron_axe"
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":336,
-                 "y":112
+                 "x":208,
+                 "y":64
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -434,8 +439,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":5,
- "nextobjectid":13,
+ "nextlayerid":3,
+ "nextobjectid":10,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.0",
