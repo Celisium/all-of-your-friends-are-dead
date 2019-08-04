@@ -27,7 +27,7 @@ var maps = {
                    "type":"",
                    "visible":true,
                    "width":16,
-                   "x":0,
+                   "x":(22*16),
                    "y":112
                   }, 
                   {

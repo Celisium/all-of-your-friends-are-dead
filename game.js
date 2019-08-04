@@ -144,11 +144,23 @@ var inventory = [
 
 ]
 
+var shop_items = [
+  { id: "iron_lance", cost: 200 },
+  { id: "iron_axe", cost: 300 },
+  { id: "steel_sword", cost: 400 },
+  { id: "steel_lance", cost: 300 },
+  { id: "steel_axe", cost: 500 },
+  { id: "fire", cost: 500 },
+  { id: "thunder", cost: 400 },
+  { id: "wind", cost: 300 },
+  { id: "hp_potion", cost: 50 },
+]
+
 var equipped = 0;
 
 var player_level = 1;
 var player_xp = 0;
-var player_cash = 0;
+var player_cash = 500;
 
 function calc_player_damage(victim) {
 
@@ -733,6 +745,23 @@ canvas.addEventListener("mousedown", e => {
   } else if (game_state == "victory" && victory_one_frame) {
     victory_one_frame = false;
     game_state = "shop";
+  } else if (game_state == "shop") {
+    if (e.clientX >= 64 && e.clientX <= 64 + 256 && e.clientY >= 64 && e.clientY <= 64 + 64 * (shop_items.length + 1)) {
+      var index = Math.floor((e.clientY - 64) / 64);
+
+      var item = shop_items[index];
+
+      if (player_cash >= item.cost && inventory.length < 8) {
+        player_cash -= item.cost;
+        inventory.push({id:item.id});
+      }
+
+    } else if (e.clientX >= 512 && e.clientX <= 512 + 256 && e.clientY >= 64 + 5 * 64 && e.clientY <= 64 + 5 * 64 + 128) {
+      map_index++;
+      load_map(map_order[map_index]);
+      player_turn_state = "unhighlighted";
+      game_state = "player_turn_anim";
+    }
   }
 
 });
@@ -819,6 +848,46 @@ function draw(timestamp) {
       ctx.fillStyle = "#FFFFFF";
       ctx.fillText("Click to Proceed", window.innerWidth / 2, window.innerHeight / 2 + 48);
       ctx.textAlign = "left";
+
+      break;
+
+    case "shop":
+
+      ctx.font = "96px sans";
+      ctx.textAlign = "center";
+      ctx.fillStyle = "#FFFFFF";
+      ctx.fillText("Shop", window.innerWidth / 2, 100);
+      ctx.textAlign = "left";
+
+      for (var i = 0; i < shop_items.length; i++) {
+        ctx.fillStyle = "#40404080";
+        ctx.fillRect(64 + 1, 64 + i * 64 + 1, 256 - 2, 64 - 2);
+        ctx.fillStyle = "#FFFFFF";
+        ctx.font = "16px sans";
+        ctx.fillText(item_names[shop_items[i].id] + ": " + shop_items[i].cost + "G", 64 + 8, 64 + i * 64 + 32 + 8);
+      }
+
+      for (var i = 0; i < inventory.length + 4; i++) {
+        ctx.fillStyle = "#FFFFFF";
+        ctx.font = "16px sans";
+        if (i == 0) {
+          ctx.fillText("Cash: " + player_cash  + "G", 512, 128 + i * 18);
+        } else if (i == 1) {
+
+        } else if (i == 2) {
+          ctx.fillText("Inventory (" + inventory.length + "/8):", 512, 128 + i * 18);
+        } else if (i == 3) {
+
+        } else {
+          ctx.fillText(item_names[inventory[i - 4].id], 512, 128 + i * 18);
+        }
+      }
+
+        ctx.fillStyle = "#40404080";
+        ctx.fillRect(512 + 1, 64 + 5 * 64 + 1, 256 - 2, 64 - 2);
+        ctx.fillStyle = "#FFFFFF";
+        ctx.font = "16px sans";
+        ctx.fillText("Next Battle", 512 + 8, 64 + 5 * 64 + 32 + 8);
 
       break;
 
